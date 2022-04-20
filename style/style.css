@@ -1,4 +1,36 @@
 header {
     width: 100%;
-    min-height: 600px;
+    min-height: 100vh;
+    background:black;
+    background-image: url(../images/header_background_code_640x344.jpg);/*small screen*/
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+header h1 { /* my name in the header */
+    font-family: pt-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+@media (min-width:640px) {
+    header {
+        min-height: 600px;
+        background-image: url(../images/header_background_code_1280x688.jpg );
+    }
+    header h1 {
+        font-size: 3rem;
+    }
+}
+@media (min-width:1280px) {
+    header {
+        background-image: url(../images/header_background_code_1920x1032.jpg );
+    }
+    header h1 {
+        font-size: 3.5rem;
+    }
 }
