@@ -33,6 +33,11 @@ p,li {
 /*---------------------SECTIONS---------------------*/
 section, .section:not(header) {
     padding:2rem;
+    max-width: 700px;
+    margin:auto;
+}
+section {
+    padding-bottom: 0;
 }
 section h1 {
     margin-bottom: 2rem;
@@ -53,15 +58,20 @@ section h1 {
         margin-bottom: 5rem;
     }
 }
+section {
+    padding-bottom: 0;
+}
 /*---------------------NAV---------------------*/
 nav {
     background: #1C2A29;
+    position: sticky;
+    top:-1px;
 }
 nav ul {
     display: flex;
 }
 nav li {
-    margin:40px;
+    margin:1rem;
 }
 nav a {
     text-decoration: none;
@@ -69,6 +79,14 @@ nav a {
     font-weight: 400;
     font-style: normal;
     color:#FFF;
+}
+@media (min-width:640px) {
+    nav li {
+        margin:2.5rem;
+    }
+}
+@media (min-width:1280px) {
+
 }
 /*---------------------HEADER---------------------*/
 header {
@@ -100,17 +118,55 @@ header h1 { /* my name in the header */
     }
 }
 /*---------------------PROJECTS---------------------*/
+/*MOBILE FIRST*/
 #projects .section-body {
-    margin: 0 -10px;
     display: flex;
     flex-wrap: wrap;
 }
 project {
-    flex: 1 0 21%;
+    flex: 1 0 100%;
     display: block;
-    margin: 0 10px;
+    margin: 10px 0;
+}
+project a {
+    display: flex;
+    flex-direction: column;
 }
 project img {
     width: 100%;
     height: auto;
+}
+project .project-title {
+    font-size: 2rem;
+}
+project button, project button:focus {
+    background-color: #BE2424;
+    color: #fff;
+    font-size: .625rem;
+    outline: none;
+    border: 0;
+    padding:1.2rem;
+    text-align: center;
+}
+project button:active{
+    background-color: #5b1212;
+}
+@media (min-width:640px) {
+    #projects .section-body {
+        margin: -10px;
+    }
+    project {
+        flex-basis: 34%;
+        margin: 10px;
+    }
+}
+@media (min-width:1280px) {
+    project {
+        flex-basis: 21%;
+    }
+}
+/*---------------------FOOTER---------------------*/
+footer  ul{
+    display: flex;
+    justify-content: space-between;
 }
