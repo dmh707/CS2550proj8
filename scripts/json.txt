@@ -1,0 +1,26 @@
+{
+    "1": {
+        "img_url":"../images/proj_example.png",
+        "title":"Project 1",
+        "problem_solved":"Problem I solved",
+        "github_url":"url"
+    },
+    "2": {
+        "img_url":"../images/proj_example.png",
+        "title":"Project 2",
+        "problem_solved":"Problem I solved",
+        "github_url":"url"
+    },
+    "3": {
+        "img_url":"../images/proj_example.png",
+        "title":"Project 3",
+        "problem_solved":"Problem I solved",
+        "github_url":"url"
+    },
+    "4": {
+        "img_url":"../images/proj_example.png",
+        "title":"Project 4",
+        "problem_solved":"Problem I solved",
+        "github_url":"url"
+    }
+}
