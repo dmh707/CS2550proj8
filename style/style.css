@@ -1,3 +1,38 @@
+/*---------------------TEXT FORMATING---------------------*/
+h1,p{
+    font-family: pt-sans, sans-serif;
+    font-style: normal;
+    line-height: 1.3em;
+}
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: black;
+}
+p{
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+/*---------------------NAV---------------------*/
+nav {
+    background: #1C2A29;
+}
+nav ul {
+    display: flex;
+}
+nav li {
+    margin:40px;
+}
+nav a {
+    text-decoration: none;
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#FFF;
+}
+/*---------------------HEADER---------------------*/
 header {
     width: 100%;
     min-height: 100vh;
@@ -11,10 +46,6 @@ header {
     justify-content:center;
 }
 header h1 { /* my name in the header */
-    font-family: pt-sans, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2rem;
     color: #FFFFFF;
 }
 @media (min-width:640px) {
