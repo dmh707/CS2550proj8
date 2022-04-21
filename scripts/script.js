@@ -1,9 +1,10 @@
 
 
 function readJson(){
-    fetch("scripts/projects_data.json")
+    x = fetch("scripts/projects_data.json")
         .then(response => response.json())
         .then(data => console.log(data));
+    console.log(x)
 }
 readJson()
 /*
