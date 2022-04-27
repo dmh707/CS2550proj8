@@ -1,12 +1,22 @@
+/*---------------------COLORS---------------------*/
+:root{
+    --dk-plum-1:#2F2732;
+    --dk-plum-2:#4C3C46;
+    --dk-plum-3:#75545B;
+    --dk-yellow-1:#E9A14F;
+    --dk-yellow-2:#EFC676;
+    --section-padding:2rem;
+}
 /*---------------------TEXT FORMATING---------------------*/
 body {
     font-size: 16px;
+    background-color: var(--dk-plum-2);
 }
 h1,p,li,a{
     font-family: pt-sans, sans-serif;
     font-style: normal;
     line-height: 1.3em;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 h1 {
@@ -19,7 +29,12 @@ p,li {
     font-size: 1rem;
     display: flex;
     align-items: center;
+}
+p{
     margin-bottom: 1rem;
+}
+li{
+    padding-bottom: 1rem;
 }
 @media (min-width:640px) {
     h1 {
@@ -32,39 +47,40 @@ p,li {
     }
 }
 /*---------------------SECTIONS---------------------*/
-section, .section:not(header) {
-    padding:2rem;
+
+section {
     max-width: 700px;
+}
+section, .section:not(header) {
+    padding:var(--section-padding) 0;
     margin:auto;
 }
-section {
-    padding-bottom: 0;
-}
 section h1 {
-    margin-bottom: 2rem;
+    margin-bottom: var(--section-padding);
 }
 @media (min-width:640px) {
-    section, .section:not(header) {
-        padding:5rem;
-    }
-    section h1 {
-        margin-bottom: 3.5rem;
+    :root{
+        --section-padding:3.5rem;
     }
 }
 @media (min-width:1280px) {
-    section, .section:not(header) {
-        padding:6.25rem;
-    }
-    section h1 {
-        margin-bottom: 5rem;
+    :root{
+        --section-padding:4rem;
     }
 }
-section {
-    padding-bottom: 0;
+/*---------------------BANDED SECTIONS---------------------*/
+section:nth-child(2n){
+    background-color: var(--dk-plum-3);
+    max-width: 100%;
+}
+section:nth-child(2n)>*{
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
 }
 /*---------------------NAV---------------------*/
 nav {
-    background: #1C2A29;
+    background: var(--dk-plum-1);
     position: sticky;
     top:-1px;
 }
@@ -72,22 +88,25 @@ nav ul {
     display: flex;
 }
 nav li {
-    margin:1rem;
+    padding:1rem;
 }
 nav a {
     text-decoration: none;
     font-family: raleway, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color:#FFF;
+}
+li.active {
+    color: var(--dk-plum-1);
+    background: white;
+}
+nav li.active a{
+    color:inherit;
 }
 @media (min-width:640px) {
     nav li {
-        margin:2.5rem;
+        padding:2.5rem;
     }
-}
-@media (min-width:1280px) {
-
 }
 /*---------------------HEADER---------------------*/
 header {
@@ -143,8 +162,9 @@ project .project-title {
     font-size: 2rem;
 }
 project button, project button:focus {
-    background-color: #BE2424;
-    color: #fff;
+    background-color: var(--dk-yellow-1);
+    color:white;
+    font-weight: bold;
     font-size: .625rem;
     outline: none;
     border: 0;
@@ -169,7 +189,18 @@ project button:active{
     }
 }
 /*---------------------FOOTER---------------------*/
+footer{
+    background-color: var(--dk-plum-1);
+}
 footer  ul{
     display: flex;
     justify-content: space-between;
+}
+footer{
+    max-width: 100%;
+}
+footer>*{
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
 }
