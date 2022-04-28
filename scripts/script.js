@@ -28,6 +28,7 @@ function display_project(proj){
     console.log(proj)
     let proj_elem = document.createElement('project');
     let proj_link = document.createElement('a');
+    proj_link.target = '_blank'
     proj_link.href = proj.github_url;
     proj_elem.appendChild(proj_link);
 

@@ -52,7 +52,7 @@ section {
     max-width: 700px;
 }
 section, .section:not(header) {
-    padding:var(--section-padding) 0;
+    padding:var(--section-padding) 1rem;
     margin:auto;
 }
 section h1 {
@@ -103,6 +103,15 @@ li.active {
 nav li.active a{
     color:inherit;
 }
+@media (max-width:350px) {
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav li {
+        padding: 1rem 0;
+    }
+}
 @media (min-width:640px) {
     nav li {
         padding:2.5rem;
@@ -147,7 +156,7 @@ header h1 { /* my name in the header */
     margin-bottom: -3rem;
 }
 project {
-    flex: 1 0 100%;
+    width:100%;
     display: block;
     margin: 10px 0;
     margin-bottom: 3rem;
@@ -176,24 +185,27 @@ project button, project button:focus {
 project button:active{
     background-color: #5b1212;
 }
-@media (min-width:640px) {
+@media (min-width:400px) {
     #projects .section-body {
         margin: -10px;
     }
     project {
-        flex-basis: 34%;
-        margin: 10px;
+        --margin:10px;
+        --width:50%;
+        width:calc(var(--width) - 2 * var(--margin));
+        margin: var(--margin);
         margin-bottom: 3rem;
     }
 }
 @media (min-width:640px) {
     project{
-        flex-basis: 21%;
+        --width:25%;
     }
 }
 /*---------------------FOOTER---------------------*/
 footer{
     background-color: var(--dk-plum-1);
+    padding:48px;
 }
 footer  ul{
     display: flex;
@@ -206,4 +218,39 @@ footer>*{
     max-width:700px;
     margin-left:auto;
     margin-right:auto;
+}
+footer ul li {
+    padding:0 1rem;
+}
+footer img {
+    width: 20px;
+    height: 20px;
+}
+@media (min-width:640px) {
+    footer ul li {
+        padding:0 2rem;
+    }
+    footer img {
+        width: auto;
+        height: auto;
+    }
+}
+/*---------------------ID:SKILS---------------------*/
+footer ul, #skills ul{
+    max-width: max-content;
+}
+
+@media (min-width:640px) {
+    #skills ul{
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+}
+@media (min-width:640px) {
+    #skills ul{
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
 }
