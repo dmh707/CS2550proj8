@@ -238,6 +238,7 @@ footer img {
 /*---------------------ID:SKILS---------------------*/
 footer ul, #skills ul{
     max-width: max-content;
+    margin:auto
 }
 
 @media (min-width:640px) {
