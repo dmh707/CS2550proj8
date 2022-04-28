@@ -47,7 +47,7 @@ function display_project(proj){
     proj_link.appendChild(proj_problem);
 
     let proj_button = document.createElement('button');
-    proj_button.textContent='SEE GITHUB REPO';
+    proj_button.textContent='SEE PROJECT';
     proj_link.appendChild(proj_button);
 
     return proj_elem
