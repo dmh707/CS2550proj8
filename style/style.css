@@ -187,7 +187,7 @@ project button:active{
 }
 @media (min-width:400px) {
     #projects .section-body {
-        margin: -10px;
+        margin-bottom: -10px;
     }
     project {
         --margin:10px;
